@@ -12,17 +12,17 @@ a blockchain demonstration made with python.
 
 first you clone the repo with 
 
-> ** git clone https://github.com/bayramenes/blockchain_demo.git **
+> **git clone https://github.com/bayramenes/blockchain_demo.git**
 
-a file named ** setup.py ** will apear
+a file named  __setup.py__ will apear
 
 run that file and you will be asked to enter a public and private key pair for that node that you will be running.
 
 the keypair should be generated with ecdsa function with the curve being "secp256k1" which is the same as the one used by bitcoin.
 
->  ** Note ** : you can run the node first without adding a keypair and generating one through the webpage of the node
+>  **Note** : you can run the node first without adding a keypair and generating one through the webpage of the node
 
-# running the node
+# setup environment
 
 to run the node first you have to activate the virtual enviroment that includes all of the dependencies needed for the program to run.
 
@@ -38,7 +38,7 @@ to run the node first you have to activate the virtual enviroment that includes 
 > .\env\bin\activate
 
 
-** after that you are ready to go : **
+**after that you are ready to go :**
 
 ## running the node
 
