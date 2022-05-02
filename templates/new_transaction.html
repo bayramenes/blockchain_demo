@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/add_transaction" method="post">
+        <label for="publicKey">public key </label>
+        <textarea class="form-control" name="publicKey" id="PUBLIC" cols="30" rows="5"></textarea>
+        <label for="signature">signature</label>
+        <textarea class="form-control" name="signature" id="signature" cols="30" rows="5"></textarea>
+        <div class="container mt-5">
+
+            <div class="row">    
+                <div class="col-sm">
+                    <label for="sender">sender</label>
+                <input type="text" class="form-control mx-auto w-auto" name="sender" placeholder="sender">
+                </div>
+                <div class="col-sm">
+    
+                    <label for="receiver">receiver</label>
+                    <input type="text" class="form-control mx-auto w-auto" name="receiver" placeholder="receiver">
+                </div>
+                <div class="col-sm">
+    
+                    <label for="amount">amount</label>
+                    <input type="text" class="form-control mx-auto w-auto" name="amount" placeholder="amount">
+                </div>
+                
+            </div>
+        </div>
+
+        <button class='btn btn-primary mt-5' type="submit">add transaction</button>
+
+
+
+    </form>
+{% endblock main %}

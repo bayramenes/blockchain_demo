@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div style="align-content: center;">
+        {% for i in range(chainLength)%}
+
+        <div class="block">
+            <a href="/block?index={{blocks[i]['index']-1}}" style="text-decoration: none;">
+            <table class="table table-bordered table">
+
+                
+                <tbody>
+                    <tr>
+                        <td>index :</td>
+                        <td>{{blocks[i]['index']}}</td>
+                    </tr>
+                    <tr>
+                        <td>nonce :</td>
+                        <td>{{blocks[i]['nonce']}}</td>
+                    </tr>
+                    <tr>
+                        <td>timestamp :</td>
+                        <td>{{blocks[i]['timestamp']}}</td>
+                    </tr>
+                    <tr>
+                        <td>prevhash :</td>
+                        <td>{{blocks[i]['prevhash']}}</td>
+                    </tr>
+                    <tr>
+                        <td>hash :</td>
+                        <td>{{blocks[i]['hash']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </a>
+        </div>
+        
+            {% if i+1!=chainLength %}
+            
+            <span class="material-icons chain-icon" >&#xe226;</span>
+            
+            {% endif %}
+        
+
+
+
+        </div>
+
+        {% endfor %}
+    </div>
+{% endblock main %}

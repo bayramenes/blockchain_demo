@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <form action="/new_node" method="post">
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="node" name="nodeToAdd" placeholder="new node" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add node </button>
+    </form>
+{% endblock main %}

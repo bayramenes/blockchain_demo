@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="block">
+
+    
+    <p class="text-sm-center">node address : </br> {{ address }}</p> 
+    <p class="text-sm-center">node balance : </br> {{ balance }}</p> 
+    
+    
+    <table class="table table-bordered table">
+
+
+        <thead>
+            <tr>
+                <th>address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for node in nodes %}
+            
+            <tr>
+                
+                <td>{{  node }}</td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+</div>
+    
+{% endblock main %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+{# table for the information about the block #}
+    <table class="table table-bordered table">
+
+                
+                <tbody>
+                    <tr>
+                        <td>index :</td>
+                        <td>{{blockToDisplay['index']}}</td>
+                    </tr>
+                    <tr>
+                        <td>nonce :</td>
+                        <td>{{blockToDisplay['nonce']}}</td>
+                    </tr>
+                    <tr>
+                        <td>timestamp :</td>
+                        <td>{{blockToDisplay['timestamp']}}</td>
+                    </tr>
+                    <tr>
+                        <td>prevhash :</td>
+                        <td>{{blockToDisplay['prevhash']}}</td>
+                    </tr>
+                    <tr>
+                        <td>hash :</td>
+                        <td>{{blockToDisplay['hash']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            {# table for the transactions #}
+    <table class="table table-bordered table" style="margin-top: 40px;">
+
+                <thead>
+                    <tr>
+                        <th>Sender</th>
+                        <th>Receiver</th>
+                        <th>Amount</th>
+                        <th>txHash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tx in blockToDisplay['transactions'] %}
+                    <tr>
+                        <td> {{tx['sender']}}</td>
+                        <td> {{tx['receiver']}}</td>
+                        <td> {{tx['amount']}}</td>
+                        <td> {{tx['txHash']}}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    
+                    
+                </tbody>
+            </table>
+
+
+{% endblock main %}
