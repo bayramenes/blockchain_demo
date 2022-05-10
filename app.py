@@ -69,17 +69,20 @@ def addTx():
         # the function checks whether the signature was the produces with the message and private key of the provided public key
         # and then checks whether that user is really the same user in order to prevent some one from sigining transaction of another person
         # because it will still be verified
-        if blockchain.verifyTx(
+        verificationResponse = blockchain.verifyTx(
             signature=sig,
             publicKey=public,
             message=json.dumps(msg),
             sender=sender,
             amount=amount,
-        ):
+        )
+        if verificationResponse["isValid"]:
             return blockchain.addTx(
                 {"sender": sender, "receiver": receiver, "amount": float(amount)},
                 index=1,
             )
+        else:
+            return verificationResponse["message"]
 
     else:
 

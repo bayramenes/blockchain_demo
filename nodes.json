@@ -1,7 +1,9 @@
 {
     "self": {
-        "private": "",
-        "public": ""
+        "private": "55e4fecc5cdfd080732b64fd0c8929bc0d9fa49bcceefa6d35a8890f7455e3a8",
+        "public": "16cbe8f5cba311179a37967805d16fbd4eaabca7b763f1954317746b5ab166af9added0a6abe40c008a0aad4d9c3571aa322b4fb60b07fd972018762cd3b964e"
     },
-    "nodes": []
+    "nodes": [
+        "127.0.0.1:2000"
+    ]
 }
